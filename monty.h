@@ -1,9 +1,12 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+/* -Standard Libraries- */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+/* DATA STRUCTURE STRUCT TYPEDEF */
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -32,5 +35,23 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/* FUNCTION PROTOTYPES */
+void (*get_func(stack_t **stack, int l, char *code))(stack_t **, unsigned int);
+void err(void);
+void pushOp(stack_t **stack, unsigned int line_number, char *pushNum);
+void free_stack(stack_t **stack);
+
+/* OPCODES */
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
+
+/* global VARIABLE */
+extern FILE *file;
 
 #endif
