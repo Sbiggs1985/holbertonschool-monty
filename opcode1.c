@@ -42,7 +42,7 @@ void pop(stack_t **stack, unsigned int line_number)
 
 	if (!(*stack))
 	{
-		fprint(stderr, "L%d: can't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		fclose(file);
 		free_stack(stack);
 		exit(EXIT_FAILURE);
