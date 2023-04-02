@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * pall - prints all elements of a stack
- * @stack: linked list stack to pall
- * @line_number: current line number of bytecode file
+ * pall - prints all elements on the stack
+ * @stack: The stack
+ * @line_number: current line for bytecode
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
@@ -18,9 +18,9 @@ void pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * swap - swaps the two top elements of a stack
- * @stack: linked list stack to swap
- * @line_number: current line number of bytecode file
+ * swap - The swap
+ * @stack: stack to swap
+ * @line_number: The line number
  */
 void swap(stack_t **stack, unsigned int line_number)
 {
@@ -38,9 +38,9 @@ void swap(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * add - adds the first two elements of a stack, replaces both with sum
- * @stack: linked list stack to add
- * @line_number: current line number of bytecode file
+ * add - Adds the first two elements
+ * @stack: The stack
+ * @line_number: number of bytecode
  */
 void add(stack_t **stack, unsigned int line_number)
 {
@@ -60,9 +60,9 @@ void add(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * nop - makes something happen
- * @stack: linked list stack to do nothing to
- * @line_number: current line number of bytecode file
+ * nop - The nop
+ * @stack: the stack
+ * @line_number: line number
  */
 void nop(stack_t **stack, unsigned int line_number)
 {
